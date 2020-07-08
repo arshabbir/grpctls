@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package protopb;
+option go_package="protopb";
+
+message MaxRequest{
+    int32  num1 = 1;
+    int32  num2 =2 ;
+
+}
+
+
+message MaxResponse{
+
+    int32 max = 1;
+
+}
+
+service MaxService{
+
+    rpc Max(MaxRequest)returns (MaxResponse){};
+}
+
+
